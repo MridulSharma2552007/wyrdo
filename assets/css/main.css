@@ -1,0 +1,123 @@
+@font-face {
+  font-family: "MridulDisplay";
+  src: url("../fonts/DeathMohawk_PERSONAL_USE_ONLY.otf") format("opentype");
+}
+@keyframes floaty {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(18px, -12px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floatSticker2 {
+  0% {
+    transform: translate(50%, -50%);
+  }
+  50% {
+    transform: translate(50%, -58%);
+  }
+  100% {
+    transform: translate(50%, -50%);
+  }
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+.title {
+  text-align: center;
+}
+
+.mridul {
+  margin: 0;
+  font-family: "MridulDisplay", sans-serif;
+  font-size: 200px;
+  color: #ff0000;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+.box {
+  position: relative;
+  min-height: 700px;
+  width: 40%;
+  padding: 20px;
+  background: black;
+  color: #00ffcc;
+  border: 2px solid #fc0000;
+  text-align: center;
+  box-shadow: 0 0 20px #fd0000;
+}
+
+.box h1,
+.box h2,
+.box p {
+  position: relative;
+  z-index: 1;
+}
+
+.box h1 {
+  margin-top: 0;
+  font-size: 2.5rem;
+  letter-spacing: 0.08em;
+}
+
+.box h2 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: #ff6a00;
+  font-size: 1.1rem;
+}
+
+.box p {
+  max-width: 42rem;
+  margin: 0.6rem auto;
+  line-height: 1.5;
+}
+
+.box-sticker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: auto;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.sticker-1 {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 220px;
+  height: auto;
+  z-index: 2;
+  pointer-events: none;
+}
+.sticker-2 {
+  animation: floatSticker2 5s ease-in-out infinite;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: auto;
+  transform: translate(50%, -50%);
+  pointer-events: none;
+}
+.sticker-3 {
+  position: absolute;
+  top: 100;
+  left: 0;
+  width: 200px;
+  height: auto;
+  transform: translate(-30%, -50%);
+  pointer-events: none;
+}
